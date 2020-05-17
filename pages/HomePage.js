@@ -28,3 +28,4 @@ fillDateOfBirth() {
 }
 
 }
+module.exports = new HomePage()
