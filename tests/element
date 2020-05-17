@@ -1,0 +1,24 @@
+const internetPage = require("./internet")
+
+describe("Interacting with elements", function () {
+    it("Starting Browser", () => {
+        browser.url('https://www.google.com/')
+    })
+    
+    it("Send Text Element", () => {
+        const input = $("//input[@name='q']");
+        input.setValue('Mahatma Gandhi');
+        browser.pause(5000)
+        
+     })
+    it("click on text", () => {
+        $("(//span[text()='mahatma gandhi'])[4]").click()
+        browser.pause(5000)
+
+    })
+    it("Get text for element", () => {
+       texting = $("//i[text()='The weak can never forgive. Forgiveness is the attribute of the strong.']").getText()
+        console.log(texting)
+    })
+
+})
